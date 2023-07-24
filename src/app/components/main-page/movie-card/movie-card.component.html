@@ -1,0 +1,12 @@
+<div id="movie-card" class="column">
+  <div>
+      <span id="movie-title">{{currentMovie.title}}</span>
+      <img
+          src={{currentMovie.imgSrc}}
+          alt={{currentMovie.title}}
+          class="border rounded"
+      >
+  </div>
+  <div class="d-flex justify-content-center">
+      <span>{{currentMovie.releaseYear}} • {{currentMovie.MPARating}} • {{durationString(currentMovie.durationMinutes)}}</span>
+  </div>

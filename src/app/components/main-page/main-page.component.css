@@ -1,0 +1,9 @@
+#main-page-components {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#side-bar {
+  background-color: #B95821;
+  padding: 1rem;
+}

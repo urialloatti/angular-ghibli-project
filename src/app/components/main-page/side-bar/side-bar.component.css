@@ -1,0 +1,5 @@
+#side-bar-img{
+  object-fit: contain;
+  max-width:100%;
+  border-radius: 0.1rem;
+}

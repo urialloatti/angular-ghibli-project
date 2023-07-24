@@ -1,0 +1,21 @@
+#movie-card {
+  position: relative;
+  border: solid 1px #D5BA9C;
+  padding: 0.5rem;
+}
+
+#movie-card div img {
+  max-width: 100%;
+  aspect-ratio:  270 / 380;
+}
+#movie-title {
+  position: absolute;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  background-color: #B8B2A4;
+  opacity: 70%;
+  bottom: 10%;
+  color: #0D122F;
+  font-weight: bold;
+}
