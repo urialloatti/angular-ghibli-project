@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Movies } from 'src/app/interfaces/movies';
 import { MoviesListService } from 'src/app/services/movies-list.service';
 
@@ -8,8 +8,19 @@ import { MoviesListService } from 'src/app/services/movies-list.service';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
-  // list: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-  constructor(private moviesList: MoviesListService) {}
 
-  list: Movies[] = this.moviesList.movieList
+  constructor(private moviesListService: MoviesListService) {}
+
+  moviesList: Movies[] = this.moviesListService.movieList
+
+  selectedMovie: Movies | null = null
+
+
+  movieReciver(id:string): void {
+    const movie = this.moviesListService.movieList.filter(movie => movie.id === id)
+    if (movie.length === 0) {
+      this.selectedMovie = null
+    }
+    this.selectedMovie = movie[0]
+  }
 }

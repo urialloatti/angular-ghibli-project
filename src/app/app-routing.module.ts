@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainPageComponent } from './components/main-page/main-page.component';
+
 import { LogInComponent } from './components/log-in/log-in.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { SideBarComponent } from './components/main-page/side-bar/side-bar.component';
 
 const routes: Routes = [
   {
@@ -15,7 +17,7 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo: 'main'
-  }
+  },
 ];
 
 @NgModule({
