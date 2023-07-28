@@ -1,3 +1,4 @@
+
 export interface Movies {
   title: string,
   durationMinutes: number,
@@ -5,4 +6,5 @@ export interface Movies {
   releaseYear: number,
   MPARating: string,
   imgSrc: string,
+  id: string,
 }

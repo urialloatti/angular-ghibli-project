@@ -5,6 +5,8 @@
           src={{currentMovie.imgSrc}}
           alt={{currentMovie.title}}
           class="border rounded"
+          (click)="idEmitter(currentMovie.id)"
+          clickable
       >
   </div>
   <div class="d-flex justify-content-center">

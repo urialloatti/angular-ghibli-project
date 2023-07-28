@@ -1,10 +1,13 @@
 <div id="main-page-components" class="row d-flex justify-content-around">
-  <div id="side-bar" class="column col-sm-3 d-block">
-    <main-page-side-bar></main-page-side-bar>
+  <div id="side-bar" class="column col-sm-3 d-block" *ngIf="selectedMovie">
+    <main-page-side-bar [selectedMovie]="selectedMovie"></main-page-side-bar>
   </div>
   <div id="gallery" class="column col-sm-8">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-2">
-          <main-page-movie-card *ngFor="let movie of list" [currentMovie]="movie"></main-page-movie-card>
+          <movie-card
+            *ngFor="let movie of moviesList" [currentMovie]="movie"
+            (onSelectedMovie)="movieReciver($event)">
+          </movie-card>
       </div>
   </div>
 </div>

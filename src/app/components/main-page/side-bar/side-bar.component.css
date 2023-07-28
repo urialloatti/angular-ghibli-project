@@ -3,3 +3,11 @@
   max-width:100%;
   border-radius: 0.1rem;
 }
+
+#movie-description {
+  background-color: #2B5297;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #B8B2A4;
+  margin-top: 2rem;
+}
