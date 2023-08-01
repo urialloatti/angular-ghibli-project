@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Movies } from 'src/app/interfaces/movies';
 import { MoviesListService } from 'src/app/services/movies-list.service';
 
@@ -7,9 +7,21 @@ import { MoviesListService } from 'src/app/services/movies-list.service';
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
-export class MainPageComponent {
+export class MainPageComponent implements OnInit{
 
   constructor(private moviesListService: MoviesListService) {}
+
+
+  ngOnInit(): void {
+    this.moviesListService.emitListener()
+      .subscribe( term => {
+        this.moviesList = this.moviesListService.movieList
+        term = term.toLocaleLowerCase();
+        this.moviesList = this.moviesList.filter(movie => movie.title.toLocaleLowerCase().includes(term))
+      }
+
+      );
+  }
 
   moviesList: Movies[] = this.moviesListService.movieList
 

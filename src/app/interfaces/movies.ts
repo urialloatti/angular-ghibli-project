@@ -7,4 +7,5 @@ export interface Movies {
   MPARating: string,
   imgSrc: string,
   id: string,
+  synopsis: string,
 }
