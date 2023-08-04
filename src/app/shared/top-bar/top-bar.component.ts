@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'shared-top-bar',
@@ -7,6 +8,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class TopBarComponent {
 
+  constructor(private router: Router){}
 
-
+  callUrl():string {
+    return this.router.url
+  }
+  preventDefault(event: Event){
+    event.preventDefault()
+  }
 }

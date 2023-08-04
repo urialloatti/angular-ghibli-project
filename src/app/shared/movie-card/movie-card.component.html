@@ -10,5 +10,5 @@
       >
   </div>
   <div class="d-flex justify-content-center">
-      <span>{{currentMovie.releaseYear}} • {{currentMovie.MPARating}} • {{durationString(currentMovie.durationMinutes)}}</span>
+      <span>{{currentMovie.releaseYear}} • {{currentMovie.MPARating}} • {{currentMovie.durationMinutes | minutesToString}}</span>
   </div>
