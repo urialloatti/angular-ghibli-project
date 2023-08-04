@@ -14,12 +14,6 @@ export class MovieCardComponent {
   @Output()
   onSelectedMovie: EventEmitter<string> = new EventEmitter();
 
-  durationString(duration: number): string {
-    const minutes = duration % 60;
-    const hours = (duration - minutes) / 60;
-    return `${hours}h ${minutes}m`;
-  }
-
   idEmitter(id: string): void {
     this.onSelectedMovie.emit(id)
   }

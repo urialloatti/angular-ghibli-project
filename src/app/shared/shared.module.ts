@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { MinutesToStringPipe } from './pipes/minutes-to-string.pipe';
 
 
 
@@ -11,6 +12,7 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     MovieCardComponent,
     TopBarComponent,
     SearchBoxComponent,
+    MinutesToStringPipe,
   ],
   imports: [
     CommonModule
@@ -19,6 +21,7 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     MovieCardComponent,
     TopBarComponent,
     SearchBoxComponent,
+    MinutesToStringPipe,
   ]
 })
 export class SharedModule { }
