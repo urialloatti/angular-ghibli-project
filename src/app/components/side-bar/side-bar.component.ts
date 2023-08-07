@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { MoviesListService } from '../../../services/movies-list.service';
+import { MoviesListService } from '../../services/movies-list.service';
 import { Movies } from 'src/app/interfaces/movies';
 
 @Component({

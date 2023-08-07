@@ -1,0 +1,11 @@
+#search-box-img {
+  border-radius: 5px;
+  height: 80px;
+  width: 70px;
+}
+#basic-addon1 {
+  cursor: pointer;
+}
+li {
+  cursor: pointer;
+}

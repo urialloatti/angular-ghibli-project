@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LogInComponent } from './components/log-in/log-in.component';
-import { MainPageComponent } from './components/main-page/main-page.component';
-import { SideBarComponent } from './components/main-page/side-bar/side-bar.component';
+import { LogInComponent } from './pages/log-in/log-in.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { MoviePageComponent } from './pages/movie-page/movie-page.component';
 
 const routes: Routes = [
   {
@@ -11,8 +12,8 @@ const routes: Routes = [
     component: MainPageComponent
   },
   {
-    path: 'main?',
-    component: MainPageComponent
+    path: 'movie/:id',
+    component: MoviePageComponent
   },
   {
     path: 'login',
