@@ -1,23 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { LogInComponent } from './pages/log-in/log-in.component';
-import { MainPageComponent } from './pages/main-page/main-page.component';
-import { SideBarComponent } from './components/side-bar/side-bar.component';
-import { MoviePageComponent } from './pages/movie-page/movie-page.component';
+import { MoviesListPageComponent } from './main/pages/movies-list-page/movies-list-page.component';
+import { LoginPageComponent } from './auth/pages/login-page/login-page.component';
+import { Error404Component } from './shared/pages/error404/error404.component';
 
 const routes: Routes = [
   {
     path: 'main',
-    component: MainPageComponent
+    loadChildren: () => import('src/app/main/main.module').then(m => m.MainModule)
   },
   {
-    path: 'movie/:id',
-    component: MoviePageComponent
+    path: 'auth',
+    loadChildren: () => import('src/app/auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path: 'login',
-    component: LogInComponent
+    path: '404',
+    component: Error404Component
+  },
+  {
+    path: '',
+    redirectTo: 'main',
+    pathMatch: 'full'
   },
   {
     path: '**',
