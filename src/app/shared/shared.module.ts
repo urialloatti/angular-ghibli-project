@@ -1,26 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MovieCardComponent } from './components/movie-card/movie-card.component';
-import { TopBarComponent } from './components/top-bar/top-bar.component';
-import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { MinutesToStringPipe } from './pipes/minutes-to-string.pipe';
+import { Error404Component } from './pages/error404/error404.component';
 
 
 
 @NgModule({
   declarations: [
-    MovieCardComponent,
-    TopBarComponent,
-    SearchBoxComponent,
     MinutesToStringPipe,
+    Error404Component,
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    MovieCardComponent,
-    TopBarComponent,
-    SearchBoxComponent,
     MinutesToStringPipe,
   ]
 })
